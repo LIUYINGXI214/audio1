@@ -2,47 +2,114 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎵 录音播放器</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>🎧 News Audio | Pet-friendly Policy</title>
     <style>
-        body {
-            font-family: system-ui, sans-serif;
-            background: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
         .card {
             background: white;
             border-radius: 32px;
-            padding: 32px;
-            max-width: 500px;
+            padding: 36px 32px 42px;
+            max-width: 800px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
         }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1e2b3c;
+            margin-bottom: 8px;
+        }
+
+        .subhead {
+            color: #6c7a89;
+            font-size: 0.9rem;
+            margin-bottom: 28px;
+        }
+
         audio {
             width: 100%;
-            margin: 20px 0;
+            margin: 16px 0 24px;
+            outline: none;
+            border-radius: 40px;
         }
-        .info {
+
+        /* 简洁文字区域 */
+        .text-content {
+            text-align: left;
             margin-top: 16px;
-            color: #555;
-            font-size: 0.9rem;
+        }
+
+        .text-content p {
+            font-size: 1rem;
+            line-height: 1.65;
+            color: #2c3e4e;
+            margin-bottom: 16px;
+        }
+
+        .text-content .policy-text {
+            font-weight: normal;
+        }
+
+        .signature {
+            margin-top: 24px;
+            font-size: 0.8rem;
+            color: #8a9bb0;
+            text-align: center;
+            border-top: 1px solid #eef2f6;
+            padding-top: 18px;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 28px 20px 32px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .text-content p {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
 <div class="card">
-    <h1>🎧 group A 2087 practice 1</h1>
+    <h1>🐕 Pet-Friendly Dining</h1>
+    <div class="subhead">Hong Kong Policy · mid-2026</div>
+
+    <!-- 音频播放器 -->
     <audio controls preload="metadata">
         <source src="practiceaudio.mp3" type="audio/mpeg">
         您的浏览器不支持 audio 元素。
     </audio>
-    <div class="info">created by liuyingxi, suyutong, wangzhaoyi, lizhihan</div>
+
+    <!-- 英文文字内容，简洁放置 -->
+    <div class="text-content">
+        <p>The Hong Kong government will implement the pet-friendly restaurant policy by mid-2026, giving special permits to around 500 to 1000 restaurants, so dogs can get the chance to enter the restaurant and accompany their owners during meals. For pet owners, this is a long-awaited opportunity to share dining moments with their furry friends; however, for some people, it has sparked concerns about hygiene, allergies, and public comfort. This audio news aims to explore the upcoming pet-friendly restaurant policy to be implemented in Hong Kong, and the social expectations and challenges that arise from balancing the social needs of pet owners with public hygiene, allergies, and dining comfort.</p>
+    </div>
+
+    <div class="signature">
+        🎧 Audio production · group A 2087 practice 1<br>
+        created by liuyingxi, suyutong, wangzhaoyi, lizhihan
+    </div>
 </div>
 </body>
 </html>
